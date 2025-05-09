@@ -45,7 +45,7 @@ Celem jest umożliwienie inżynierom i badaczom szybkiego zrozumienia, implement
 | **AFFECT**  | affect    | emocjonalny stan (tylko agent ludzki) |
 | **CONTEXT** | context   | meta‑język, reguły i cel konwersacji  |
 
-## 2. Warstwy i pojecia kluczowe
+## 2. Agenci i splatanie
 
 Agent ludzki i AI definiujemy jako wektory stanów:
 
