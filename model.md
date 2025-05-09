@@ -124,12 +124,21 @@ I_DEEP, I_AFFECT = initial_thought(), initial_affect()
 trust = 0.5
 
 while trust >= tau_min and not goal_met:
-    I_UT = E(I_DEEP)
+    # generowanie wypowiedzi z uwzględnieniem stanu emocji
+    I_UT = E(I_DEEP, I_AFFECT)
+
+    # przekazanie promptu do AI
     AI_UT = P(I_UT)
+
+    # interpretacja i generacja
     AI_DEEP = R(AI_UT)
     AI_UT = G(AI_DEEP)
-    I_DEEP = F(AI_UT)
-    trust = U_t(trust, match(AI_UT, I.expect))
+
+    # feedback aktualizuje treść i emocje
+    I_DEEP, I_AFFECT = F(AI_UT)
+
+    # zaufanie zależy od zgodności treści i tonu emocjonalnego
+    trust = U_t(trust, match(AI_UT, I.expect, I_AFFECT))
 
 return AI_UT, trust
 ```
