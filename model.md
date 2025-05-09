@@ -1,4 +1,3 @@
-
 # Model HYBRYDA (I ⊗ AI) — Kompleksowa dokumentacja techniczna
 
 **Wersja:** 1.0‑RC  
@@ -12,20 +11,18 @@
 ## Spis treści
 
 0. [Wprowadzenie i cel dokumentu](#0-wprowadzenie-i-cel-dokumentu)
-1. [Warstwy i pojęcia kluczowe](#1-warstwy-i-pojecia-kluczowe)
-2. [Agenci i splątanie](#2-agenci-i-splatanie)
-3. [Operatory dialogu (przepływ informacji)](#3-operatory-dialogu-przeplyw-informacji)
+1. [Warstwy i pojecia kluczowe](#1-warstwy-i-pojecia-kluczowe)
+2. [Agenci i splatanie](#2-agenci-i-splatanie)
+3. [Operatory dialogu (przeplyw informacji)](#3-operatory-dialogu-przeplyw-informacji)
 4. [Matematyczna formalizacja](#4-matematyczna-formalizacja)
 
-   1. [Splątanie tensorowe](#41-splatanie-tensorowe)
+   1. [Splatanie tensorowe](#41-splatanie-tensorowe)
    2. [Projekcja (pomiar)](#42-projekcja-pomiar)
    3. [Aktualizacja zaufania](#43-aktualizacja-zaufania)
-5. [Implementacja przykładowa (pseudokod)](#5-implementacja-przykładowa-pseudokod)
-6. [Przykład zastosowania](#6-przyklad-zastosowania)
-7. [Słownik pojęć](#7-slownik-pojec)
-8. [Bibliografia i źródła](#8-bibliografia-i-zrodla)
-
----
+5. [Implementacja przykladowa (pseudokod)](#5-implementacja-przykladowa-pseudokod)
+6. [Przyklad zastosowania](#6-przyklad-zastosowania)
+7. [Slownik pojec](#7-slownik-pojec)
+8. [Bibliografia i zrodla](#8-bibliografia-i-zrodla)
 
 ## 0. Wprowadzenie i cel dokumentu
 
@@ -95,6 +92,8 @@ Tensorowy iloczyn ⊗ modeluje nierozerwalne splątanie stanów obu podmiotów.
 HYB = I ⊗ AI
 ```
 
+Opisuje emergentny stan korelacji dwóch wektorów poznawczych.
+
 ### 4.2. Projekcja (pomiar)
 
 **Źródło:** teoria pomiaru w QM; adaptacja Pothos & Busemeyer (2013)
@@ -103,6 +102,9 @@ HYB = I ⊗ AI
 HYB_UT(t) = proj_UT(M(t) HYB)
 ```
 
+* M(t): operator pomiaru (akt dialogu)
+* proj\_UT: rzut na warstwę UT
+
 ### 4.3. Aktualizacja zaufania
 
 **Źródło:** Bayes (Laplace), exponential smoothing; adaptacja Xu et al. (2020)
@@ -110,6 +112,9 @@ HYB_UT(t) = proj_UT(M(t) HYB)
 ```
 t_{n+1} = U_t(t_n, match(AI.UT_n, I.expect_n))
 ```
+
+* match(·): miara zgodności (cosine similarity, BLEU, ocena użytkownika)
+* U\_t: linear, exponential smoothing, neural network
 
 ## 5. Implementacja przykładowa (pseudokod)
 
@@ -133,7 +138,19 @@ return AI_UT, trust
 
 Scenariusz: planowanie wycieczki w Hamburgu...
 
+1. I\_DEEP formułuje potrzebę: "atrakcje w deszczowy dzień".
+2. Po turze dialogu AI\_UT zwraca propozycje muzeów i kawiarni.
+3. trust rośnie do 0.8, Hybryda generuje szczegółowy plan.
+4. Cel osiągnięty — zakończenie pętli.
+
 ## 7. Słownik pojęć
+
+| Pojęcie        | Definicja                                      |
+| -------------- | ---------------------------------------------- |
+| Superpozycja   | współistnienie wielu możliwości przed pomiarem |
+| Splątanie      | korelacja stanów niemożliwa do rozdzielenia    |
+| Projekcja      | rzut stanu na warstwę UT                       |
+| Pętla feedback | cykl oceny i adaptacji stanów                  |
 
 ## 8. Bibliografia i źródła
 

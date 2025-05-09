@@ -15,7 +15,7 @@
 2. [Geneza i kontekst](#2-geneza-i-kontekst)
 3. [Kluczowe cechy modelu](#3-kluczowe-cechy-modelu)
 4. [Licencja](#4-licencja)
-5. [Współautorstwo](#5-współautorstwo)
+5. [Wspolautorstwo](#5-wspolautorstwo)
 6. [Podsumowanie](#6-podsumowanie)
 
 ---
