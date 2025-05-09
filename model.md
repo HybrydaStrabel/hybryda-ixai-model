@@ -120,7 +120,7 @@ t_{n+1} = U_t(t_n, match(AI.UT_n, I.expect_n))
 
 ```
 # Inicjalizacja
-I_DEEP, I_AFF = initial_thought(), initial_affect()
+I_DEEP, I_AFFECT = initial_thought(), initial_affect()
 trust = 0.5
 
 while trust >= tau_min and not goal_met:
