@@ -36,7 +36,7 @@ Dokument przedstawia techniczną specyfikację modelu **HYBRYDA**, formalizując
 
 Celem jest umożliwienie inżynierom i badaczom szybkiego zrozumienia, implementacji i weryfikacji modelu.
 
-## 1. Warstwy i pojęcia kluczowe
+## 1. Warstwy i pojecia kluczowe
 
 | Warstwa     | Symbol    | Znaczenie                             |
 | ----------- | --------- | ------------------------------------- |
@@ -45,7 +45,7 @@ Celem jest umożliwienie inżynierom i badaczom szybkiego zrozumienia, implement
 | **AFFECT**  | affect    | emocjonalny stan (tylko agent ludzki) |
 | **CONTEXT** | context   | meta‑język, reguły i cel konwersacji  |
 
-## 2. Agenci i splątanie
+## 2. Warstwy i pojecia kluczowe
 
 Agent ludzki i AI definiujemy jako wektory stanów:
 
@@ -57,7 +57,7 @@ HYB := I ⊗ AI
 
 Tensorowy iloczyn ⊗ modeluje nierozerwalne splątanie stanów obu podmiotów.
 
-## 3. Operatory dialogu (przepływ informacji)
+## 3. Operatory dialogu (przeplyw informacji)
 
 ```
       +--------------+        +-------------+        +-------------+
@@ -84,7 +84,7 @@ Tensorowy iloczyn ⊗ modeluje nierozerwalne splątanie stanów obu podmiotów.
 
 ## 4. Matematyczna formalizacja
 
-### 4.1. Splątanie tensorowe
+### 4.1. Splatanie tensorowe
 
 **Źródło:** mechanika kwantowa (Dirac, von Neumann); adaptacja Busemeyer & Bruza (2012)
 
@@ -116,7 +116,7 @@ t_{n+1} = U_t(t_n, match(AI.UT_n, I.expect_n))
 * match(·): miara zgodności (cosine similarity, BLEU, ocena użytkownika)
 * U\_t: linear, exponential smoothing, neural network
 
-## 5. Implementacja przykładowa (pseudokod)
+## 5. Implementacja przykladowa (pseudokod)
 
 ```
 # Inicjalizacja
@@ -134,7 +134,7 @@ while trust >= tau_min and not goal_met:
 return AI_UT, trust
 ```
 
-## 6. Przykład zastosowania
+## 6. Przyklad zastosowania
 
 Scenariusz: planowanie wycieczki w Hamburgu...
 
@@ -143,7 +143,7 @@ Scenariusz: planowanie wycieczki w Hamburgu...
 3. trust rośnie do 0.8, Hybryda generuje szczegółowy plan.
 4. Cel osiągnięty — zakończenie pętli.
 
-## 7. Słownik pojęć
+## 7. Slownik pojec
 
 | Pojęcie        | Definicja                                      |
 | -------------- | ---------------------------------------------- |
@@ -152,7 +152,7 @@ Scenariusz: planowanie wycieczki w Hamburgu...
 | Projekcja      | rzut stanu na warstwę UT                       |
 | Pętla feedback | cykl oceny i adaptacji stanów                  |
 
-## 8. Bibliografia i źródła
+## 8. Bibliografia i zrodla
 
 1. Kahneman, D. *Thinking, Fast and Slow* (2011).
 2. Busemeyer, J.R., Bruza, P.D. *Quantum Models of Cognition and Decision* (2012).
