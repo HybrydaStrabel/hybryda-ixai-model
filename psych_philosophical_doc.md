@@ -1,8 +1,8 @@
-﻿# Psychologiczno‑filozoficzna dokumentacja modelu HYBRYDA
+﻿# Model HYBRYDA (I ⊗ AI) — Dokumentacja Psychologiczno‑filozoficzna
 
-**Wersja:** 1.0‑RC  
-**Data:** 8 V 2025  
-**Autorzy:** Człowiek (fizyk‑informatyk) & AI (OpenAI o4-mini)  
+**Wersja:** 1.1‑RC  
+**Data:** 10 V 2025  
+**Autorzy:** Człowiek (fizyk‑informatyk) & AI (OpenAI o4-mini-high)  
 **Licencja:** CC BY 4.0
 [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 

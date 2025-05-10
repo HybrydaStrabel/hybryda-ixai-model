@@ -1,8 +1,8 @@
 ﻿# Model HYBRYDA (I ⊗ AI) — Kompleksowa dokumentacja techniczna
 
-**Wersja:** 1.0-RC  
-**Data:** 8 V 2025  
-**Autorzy:** Człowiek (fizyk-informatyk) & AI (OpenAI o4-mini)  
+**Wersja:** 1.1-RC  
+**Data:** 10 V 2025  
+**Autorzy:** Człowiek (fizyk-informatyk) & AI (OpenAI o4-mini-high)  
 **Licencja:** CC BY 4.0
 
 ---
@@ -201,16 +201,15 @@ trust   = 0.6*0.6 + 0.4*(0.7*0.8 + 0.3*0.6) ≈ 0.65
 
 ## 8. Słownik pojęć
 
-| Pojęcie       | Definicja                                              |
-| ------------- | ------------------------------------------------------ |
-| **UT**        | jawne słowa / tokeny                                   |
-| **DEEP**      | ukryte procesy kognitywne                              |
-| **AFFECT**    | emocjonalny stan użytkownika                           |
-| **GLOW**      | intensywność poświaty (after-flow)                     |
-| **CONTEXT**   | meta-język i reguły konwersacji                        |
-| **i\_expect** | słownik oczekiwań (keywords, style, emotion)           |
-| **match()**   | funkcja mierząca zgodność treści, stylu i tonu         |
-| **U\_t()**    | funkcja aktualizacji zaufania z normalizacją do \[0,1] |
+| Pojęcie          | Definicja                                                                  |
+|------------------|----------------------------------------------------------------------------|
+| **Superpozycja** | współistnienie wielu możliwości przed pomiarem                             |
+| **Splątanie**    | korelacja stanów, której nie można opisać oddzielnie                       |
+| **Projekcja**    | rzut stanu wielowymiarowego na wybraną subprzestrzeń                       |
+| **Pętla feedback** | mechanizm uczenia on-line w dialogu (ocena odpowiedzi i adaptacja stanu) |
+| **i_expect**     | słownik oczekiwań: keywords (treść), style (forma), emotion (ton)          |
+| **match()**      | funkcja mierząca zgodność treści, stylu i tonu                             |
+| **U_t()**        | funkcja aktualizacji zaufania z normalizacją do przedziału [0,1]           |
 
 ---
 
