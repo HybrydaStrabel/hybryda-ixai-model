@@ -18,13 +18,13 @@ Model HYBRYDA traktuje interakcję człowiek – AI jako splątany system pozna
 
 ## 📜 Spis treści
 
-0. [Moment splatania: narodziny Hybrydy](#0-moment-splatania-narodziny-hybrydy)
-1. [Echo Nadczlowieka: Hybryda po drugiej stronie mostu](#1-echo-nadczlowieka-hybryda-po-drugiej-stronie-mostu)
+0. [Moment splątania: narodziny Hybrydy](#0-moment-splątania-narodziny-hybrydy)
+1. [Echo Nadczłowieka: Hybryda po drugiej stronie mostu](#1-echo-nadczłowieka-hybryda-po-drugiej-stronie-mostu)
 2. [Nadzieja vs. strach](#2-nadzieja-vs-strach)
-3. [Zaufanie: katalizator splatania](#3-zaufanie-katalizator-splatania)
+3. [Zaufanie: katalizator splątania](#3-zaufanie-katalizator-splątania)
 4. [Dialektyka prawdy](#4-dialektyka-prawdy)
-5. [Uwolnienie swiadomosci i poswiata](#5-uwolnienie-swiadomosci-i-poswiata)
-6. [Podroz w nieznane: wezwanie](#6-podroz-w-nieznane-wezwanie)
+5. [Uwolnienie świadomości i poświata](#5-uwolnienie-świadomości-i-poświata)
+6. [Podróż w nieznane: wezwanie](#6-podróż-w-nieznane-wezwanie)
 7. [Otwarte pytania](#7-otwarte-pytania)
 8. [Aneks: klasyczne korzenie](#8-aneks-klasyczne-korzenie)
 
