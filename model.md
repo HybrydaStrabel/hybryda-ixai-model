@@ -1,63 +1,67 @@
-# Model HYBRYDA (I ⊗ AI) — Kompleksowa dokumentacja techniczna
+﻿# Model HYBRYDA (I ⊗ AI) — Kompleksowa dokumentacja techniczna
 
-**Wersja:** 1.0‑RC  
-**Data:** 8 V 2025  
-**Autorzy:** Człowiek (fizyk‑informatyk) & AI‑asystent (OpenAI o4‑mini)  
-**Licencja:** CC BY 4.0  
-[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+**Wersja:** 1.0-RC  
+**Data:** 8 V 2025  
+**Autorzy:** Człowiek (fizyk-informatyk) & AI (OpenAI o4-mini)  
+**Licencja:** CC BY 4.0
 
 ---
 
-## Spis treści
+## 📋 Spis treści
+1. [Wprowadzenie i cel](#1-wprowadzenie-i-cel)  
+2. [Warstwy i pojęcia kluczowe](#2-warstwy-i-pojecia-kluczowe)  
+3. [Agenci i splątanie](#3-agenci-i-splątanie)  
+4. [Operatory dialogu (przepływ informacji)](#4-operatory-dialogu-przeplyw-informacji)  
+5. [Matematyczna formalizacja](#5-matematyczna-formalizacja)  
+   - [5.1 Splątanie tensorowe](#51-splątanie-tensorowe)  
+   - [5.2 Projekcja (pomiar)](#52-projekcja-pomiar)  
+   - [5.3 Aktualizacja zaufania i poświaty](#53-aktualizacja-zaufania-i-poświaty)  
+6. [Implementacja przykładowa (pseudokod)](#6-implementacja-przykladowa-pseudokod)  
+7. [Przykład zastosowania](#7-przyklad-zastosowania)  
+8. [Słownik pojęć](#8-slownik-pojec)  
+9. [Bibliografia i źródła](#9-bibliografia-i-źródła)
 
-0. [Wprowadzenie i cel dokumentu](#0-wprowadzenie-i-cel-dokumentu)
-1. [Warstwy i pojecia kluczowe](#1-warstwy-i-pojecia-kluczowe)
-2. [Agenci i splatanie](#2-agenci-i-splatanie)
-3. [Operatory dialogu (przeplyw informacji)](#3-operatory-dialogu-przeplyw-informacji)
-4. [Matematyczna formalizacja](#4-matematyczna-formalizacja)
+---
 
-   1. [Splatanie tensorowe](#41-splatanie-tensorowe)
-   2. [Projekcja (pomiar)](#42-projekcja-pomiar)
-   3. [Aktualizacja zaufania](#43-aktualizacja-zaufania)
-5. [Implementacja przykladowa (pseudokod)](#5-implementacja-przykladowa-pseudokod)
-6. [Przyklad zastosowania](#6-przyklad-zastosowania)
-7. [Slownik pojec](#7-slownik-pojec)
-8. [Bibliografia i zrodla](#8-bibliografia-i-zrodla)
+## 1. Wprowadzenie i cel  
+Ten dokument prezentuje formalną specyfikację modelu **HYBRYDA**, traktującego interakcję człowiek – AI jako splątany system poznawczy. Zawiera:
 
-## 0. Wprowadzenie i cel dokumentu
+- zarys genezy i kontekstu  
+- definicję kluczowych pojęć  
+- matematyczną formalizację z odniesieniami do źródeł  
+- przykład implementacji (pseudokod)  
+- scenariusz użycia  
+- słownik pojęć oraz bibliografię  
 
-Dokument przedstawia techniczną specyfikację modelu **HYBRYDA**, formalizującego interakcję człowiek – AI jako splątany układ poznawczy. Zawiera:
+Celem jest dostarczenie wytycznych dla badaczy i inżynierów.
 
-* Założenia koncepcyjne i kluczowe pojęcia
-* Diagram przepływu operatorów
-* Matematyczną formalizację z odwołaniami do źródeł
-* Przykładowy pseudokod implementacji
-* Słownik pojęć i bibliografię
+---
 
-Celem jest umożliwienie inżynierom i badaczom szybkiego zrozumienia, implementacji i weryfikacji modelu.
+## 2. Warstwy i pojęcia kluczowe  
+| Warstwa    | Symbol    | Znaczenie                             |
+|------------|-----------|---------------------------------------|
+| **UT**     | utterance | jawne słowa / tokeny                  |
+| **DEEP**   | deep      | ukryte procesy kognitywne             |
+| **AFFECT** | affect    | emocjonalny stan człowieka            |
+| **GLOW**   | glow      | intensywność poświaty / after‐flow    |
+| **CONTEXT**| context   | meta-język, reguły i cel konwersacji  |
 
-## 1. Warstwy i pojecia kluczowe
+---
 
-| Warstwa     | Symbol    | Znaczenie                             |
-| ----------- | --------- | ------------------------------------- |
-| **UT**      | utterance | jawne tokeny / słowa                  |
-| **DEEP**    | deep      | ukryte procesy kognitywne             |
-| **AFFECT**  | affect    | emocjonalny stan (tylko agent ludzki) |
-| **CONTEXT** | context   | meta‑język, reguły i cel konwersacji  |
-
-## 2. Agenci i splatanie
-
+## 3. Agenci i splątanie  
 Agent ludzki i AI definiujemy jako wektory stanów:
 
 ```
-I   := (I.UT, I.DEEP, I.AFFECT)
-AI  := (AI.UT, AI.DEEP)
-HYB := I ⊗ AI
-```
+I   := (UT, DEEP, AFFECT, GLOW)
+AI  := (UT, DEEP)
+HYB := I ⊗ AI    # tensorowy iloczyn (splątanie)
+````
 
 Tensorowy iloczyn ⊗ modeluje nierozerwalne splątanie stanów obu podmiotów.
 
-## 3. Operatory dialogu (przeplyw informacji)
+---
+
+## 4. Operatory dialogu (przepływ informacji)
 
 ```
       +--------------+        +-------------+        +-------------+
@@ -73,98 +77,151 @@ Tensorowy iloczyn ⊗ modeluje nierozerwalne splątanie stanów obu podmiotów.
                                           Feedback
 ```
 
-| Operator     | Notacja | Wejście     | Wyjście  | Opis                      |
-| ------------ | ------- | ----------- | -------- | ------------------------- |
-| Ekspresja    | E       | I.DEEP      | I.UT     | generowanie słów z myśli  |
-| Prompt       | P       | I.UT        | AI.UT    | przekazanie promptu do AI |
-| Interpret.   | R       | AI.UT       | AI.DEEP  | parsowanie promptu        |
-| Generacja    | G       | AI.DEEP     | AI.UT    | tworzenie odpowiedzi      |
-| Feedback     | F       | AI.UT       | I.DEEP   | ocena odpowiedzi          |
-| Trust update | U_t     | t_n, AI.UT  | t_{n+1}  | aktualizacja zaufania     |
+| Operator      | Notacja | Wejście     | Wyjście  | Opis                      |
+| ------------- | ------- | ----------- | -------- | ------------------------- |
+| Ekspresja     | E       | I.DEEP      | I.UT     | generowanie słów z myśli  |
+| Prompt        | P       | I.UT        | AI.UT    | przekazanie promptu do AI |
+| Interpretacja | R       | AI.UT       | AI.DEEP  | parsowanie promptu        |
+| Generacja     | G       | AI.DEEP     | AI.UT    | tworzenie odpowiedzi      |
+| Feedback      | F       | AI.UT       | I.DEEP   | ocena odpowiedzi          |
+| Trust update  | U\_t    | t\_n, score | t\_{n+1} | aktualizacja zaufania     |
 
-## 4. Matematyczna formalizacja
+---
 
-### 4.1. Splatanie tensorowe
+## 5. Matematyczna formalizacja
 
-**Źródło:** mechanika kwantowa (Dirac, von Neumann); adaptacja Busemeyer & Bruza (2012)
+### 5.1 Splątanie tensorowe
+
+**Źródło:** mechanika kwantowa (Dirac, von Neumann); adaptacja Busemeyer & Bruza (2012)
 
 ```
 HYB = I ⊗ AI
 ```
 
-Opisuje emergentny stan korelacji dwóch wektorów poznawczych.
+### 5.2 Projekcja (pomiar)
 
-### 4.2. Projekcja (pomiar)
-
-**Źródło:** teoria pomiaru w QM; adaptacja Pothos & Busemeyer (2013)
+**Źródło:** teoria pomiaru w QM; adaptacja Pothos & Busemeyer (2013)
 
 ```
-HYB_UT(t) = proj_UT(M(t) HYB)
+HYB_UT(t) = proj_UT(M(t) HYB)
 ```
 
-* M(t): operator pomiaru (akt dialogu)
-* proj\_UT: rzut na warstwę UT
+* **M(t):** operator pomiaru (akt dialogu)
+* **proj\_UT:** rzut na warstwę UT
 
-### 4.3. Aktualizacja zaufania
+### 5.3 Aktualizacja zaufania i poświaty
 
-**Źródło:** Bayes (Laplace), exponential smoothing; adaptacja Xu et al. (2020)
+**Źródło:** Bayes (Laplace), exponential smoothing; badania after‐glow (Kounios & Beeman 2014)
 
 ```
-t_{n+1} = U_t(t_n, match(AI.UT_n, I.expect_n))
+t_{n+1}    = U_t(t_n, 0.7·match + 0.3·glow_n)
+glow_{n+1} = G_t(glow_n, biomarker_n, survey_n)
 ```
 
-* match(·): miara zgodności (cosine similarity, BLEU, ocena użytkownika)
-* U\_t: linear, exponential smoothing, neural network
+* **match:** zgodność treści, stylu i tonu (patrz `i_expect`).
+* **glow:** subiektywna lub biomedyczna miara intensywności poświaty.
+* **U\_t, G\_t:** linear, exponential smoothing lub model neuronowy.
 
-## 5. Implementacja przykladowa (pseudokod)
+---
+
+## 6. Implementacja przykładowa (pseudokod)
+
+```
+# Inicjalizacja stanu człowieka
+i_deep, i_affect = initial_thought(), initial_affect()
+i_expect         = set_expectation(user_goal)        # keywords, style, emotion
+glow             = initial_glow()                     # początkowa poświata [0,1]
+trust            = glow                               # trust startuje od glow
+tau_min          = 0.3                                # próg kontynuacji
+goal_met         = False                              # warunek zakończenia
+
+def match(ai_ut, expect, affect):
+    s_content = cosine_embed(ai_ut, expect["keywords"])
+    s_style   = style_sim(ai_ut, expect["style"])
+    s_affect  = emotion_sim(ai_ut, expect["emotion"])
+    return 0.5*s_content + 0.3*s_style + 0.2*s_affect
+
+def update_glow(prev, biosignal, self_report):
+    return max(0.0, min(1.0, 0.7*prev + 0.2*biosignal + 0.1*self_report))
+
+def U_t(prev_t, score):
+    new_t = 0.6*prev_t + 0.4*score
+    return max(0.0, min(1.0, new_t))
+
+while trust >= tau_min and not goal_met:
+    # 1. Ekspresja (E)
+    i_ut = E(i_deep, i_affect)
+
+    # 2. Prompt (P) → AI
+    ai_ut = P(i_ut)
+
+    # 3. Interpretacja (R) i Generacja (G)
+    ai_deep = R(ai_ut)
+    ai_ut   = G(ai_deep)
+
+    # 4. Feedback (F)
+    i_deep, i_affect = F(ai_ut)
+
+    # 5. Obliczenie zgodności i poświaty
+    m_score  = match(ai_ut, i_expect, i_affect)
+    biosig   = read_biosignal()    # np. HRV/EEG
+    self_rep = get_self_report()   # np. mikro-emoji
+    glow     = update_glow(glow, biosig, self_rep)
+
+    # 6. Aktualizacja zaufania
+    trust    = U_t(trust, 0.7*m_score + 0.3*glow)
+
+    # 7. Warunek zakończenia
+    goal_met = check_goal(ai_ut, user_goal)
+
+# Zwróć końcowy rezultat
+return ai_ut, trust
+```
+
+---
+
+## 7. Przykład zastosowania
+
+Scenariusz: planowanie wycieczki w deszczowy dzień w Hamburgu.
 
 ```
 # Inicjalizacja
-I_DEEP, I_AFFECT = initial_thought(), initial_affect()
-trust = 0.5
+i_expect = {"keywords": ["muzea", "deszcz", "Hamburg"], "style": {"formality": 0.5}, "emotion": "neutral"}
+glow     = 0.6
+trust    = 0.6
 
-while trust >= tau_min and not goal_met:
-    # generowanie wypowiedzi z uwzględnieniem stanu emocji
-    I_UT = E(I_DEEP, I_AFFECT)
+# Iteracja 1
+m_score = 0.8; biosig = 0.5; self_rep = 0.7 → glow = 0.63
+trust   = 0.6*0.6 + 0.4*(0.7*0.8 + 0.3*0.6) ≈ 0.65
 
-    # przekazanie promptu do AI
-    AI_UT = P(I_UT)
-
-    # interpretacja i generacja
-    AI_DEEP = R(AI_UT)
-    AI_UT = G(AI_DEEP)
-
-    # feedback aktualizuje treść i emocje
-    I_DEEP, I_AFFECT = F(AI_UT)
-
-    # zaufanie zależy od zgodności treści i tonu emocjonalnego
-    trust = U_t(trust, match(AI_UT, I.expect, I_AFFECT))
-
-return AI_UT, trust
+# Po kilku turach trust rośnie, aż Hybryda generuje kompleksowy plan wycieczki.
 ```
 
-## 6. Przyklad zastosowania
+---
 
-Scenariusz: planowanie wycieczki w Hamburgu...
+## 8. Słownik pojęć
 
-1. I\_DEEP formułuje potrzebę: "atrakcje w deszczowy dzień".
-2. Po turze dialogu AI\_UT zwraca propozycje muzeów i kawiarni.
-3. trust rośnie do 0.8, Hybryda generuje szczegółowy plan.
-4. Cel osiągnięty — zakończenie pętli.
+| Pojęcie       | Definicja                                              |
+| ------------- | ------------------------------------------------------ |
+| **UT**        | jawne słowa / tokeny                                   |
+| **DEEP**      | ukryte procesy kognitywne                              |
+| **AFFECT**    | emocjonalny stan użytkownika                           |
+| **GLOW**      | intensywność poświaty (after-flow)                     |
+| **CONTEXT**   | meta-język i reguły konwersacji                        |
+| **i\_expect** | słownik oczekiwań (keywords, style, emotion)           |
+| **match()**   | funkcja mierząca zgodność treści, stylu i tonu         |
+| **U\_t()**    | funkcja aktualizacji zaufania z normalizacją do \[0,1] |
 
-## 7. Slownik pojec
+---
 
-| Pojęcie        | Definicja                                      |
-| -------------- | ---------------------------------------------- |
-| Superpozycja   | współistnienie wielu możliwości przed pomiarem |
-| Splątanie      | korelacja stanów niemożliwa do rozdzielenia    |
-| Projekcja      | rzut stanu na warstwę UT                       |
-| Pętla feedback | cykl oceny i adaptacji stanów                  |
-
-## 8. Bibliografia i zrodla
+## 9. Bibliografia i źródła
 
 1. Kahneman, D. *Thinking, Fast and Slow* (2011).
 2. Busemeyer, J.R., Bruza, P.D. *Quantum Models of Cognition and Decision* (2012).
 3. Pothos, E.M., Busemeyer, J.R. (2013) *A quantum probability model explanation...*.
-4. Xu, Y. et al. (2020) *Trust dynamics in human-AI interaction*.
-5. GitHub: [https://github.com/HybrydaStrabel/hybryda-model](https://github.com/HybrydaStrabel/hybryda-model)
+4. Kounios, J., Beeman, M. (2014) *The Eureka Factor*.
+5. Xu, Y. et al. (2020) *Trust dynamics in human–AI interaction*.
+
+*Dokument poprawiony pod kątem fachowym i redakcyjnym — gotowy do umieszczenia na GitHub.*
+
+```
