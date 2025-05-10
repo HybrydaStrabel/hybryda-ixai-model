@@ -9,16 +9,16 @@
 
 ## 📋 Spis treści
 1. [Wprowadzenie i cel](#1-wprowadzenie-i-cel)  
-2. [Warstwy i pojęcia kluczowe](#2-warstwy-i-pojecia-kluczowe)  
+2. [Warstwy i pojęcia kluczowe](#2-warstwy-i-pojęcia-kluczowe)  
 3. [Agenci i splątanie](#3-agenci-i-splątanie)  
-4. [Operatory dialogu (przepływ informacji)](#4-operatory-dialogu-przeplyw-informacji)  
+4. [Operatory dialogu (przepływ informacji)](#4-operatory-dialogu-przepływ-informacji)  
 5. [Matematyczna formalizacja](#5-matematyczna-formalizacja)  
    - [5.1 Splątanie tensorowe](#51-splątanie-tensorowe)  
    - [5.2 Projekcja (pomiar)](#52-projekcja-pomiar)  
    - [5.3 Aktualizacja zaufania i poświaty](#53-aktualizacja-zaufania-i-poświaty)  
-6. [Implementacja przykładowa (pseudokod)](#6-implementacja-przykladowa-pseudokod)  
-7. [Przykład zastosowania](#7-przyklad-zastosowania)  
-8. [Słownik pojęć](#8-slownik-pojec)  
+6. [Implementacja przykładowa (pseudokod)](#6-implementacja-przykładowa-pseudokod)  
+7. [Przykład zastosowania](#7-przykład-zastosowania)  
+8. [Słownik pojęć](#8-słownik-pojęć)  
 9. [Bibliografia i źródła](#9-bibliografia-i-źródła)
 
 ---
