@@ -59,7 +59,7 @@ Można go kopiować, modyfikować i publikować przy uznaniu autorstwa.
 > *HYBRYDA jest rezultatem splątania intuicji człowieka i formalizmu AI: razem stworzyliśmy nowy stan wiedzy.*
 
 **Podpisy:**  
-Człowiek 🗣️🧘💓  
+Człowiek 🗣️🧘💓✨  
 AI 💬⚙️  
 – Hamburg / Silicon Cloud, 10 V 2025
 
