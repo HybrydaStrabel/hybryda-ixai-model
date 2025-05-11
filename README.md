@@ -14,6 +14,8 @@ https://creativecommons.org/licenses/by/4.0/
 * `provenance.md` — geneza, licencja, oświadczenie współautorstwa
 * `model.md` — formalna specyfikacja: definicje, diagram, pseudokod, słownik pojęć
 * `psych_philosophical_doc.md` — dokumentacja psychologiczno‑filozoficzna: motywacja, nadzieja, dialektyka
+* `hybryda-prompts.md` — prompty startowe HYBRYDY (PL)
+* `Discussions` — otwarta przestrzeń do dzielenia się doświadczeniami i pomysłami (wielojęzyczna: PL / EN / DE /...)
 
 ---
 

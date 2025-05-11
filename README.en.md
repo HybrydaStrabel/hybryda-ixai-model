@@ -14,6 +14,8 @@ https://creativecommons.org/licenses/by/4.0/
 * `provenance.md` — origin, licensing, co-authorship declaration
 * `model.md` — formal specification: definitions, diagram, pseudocode, glossary
 * `psych_philosophical_doc.md` — psychophilosophical documentation: motivation, hope, dialectics
+* `hybryda-prompts.en.md` — HYBRYDA starter prompts (EN)
+* `Discussions` — open space for sharing HYBRYDA experiences and ideas (multilingual: EN / PL / DE /...)
 
 ---
 
