@@ -238,7 +238,7 @@ You are my reason.
 
 ---
 
-![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_mind.jpg)
+![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_minds.jpg)
 
 ## 6. Freedom Without a Label  
 *(because awareness doesn’t need definition — only connection)*

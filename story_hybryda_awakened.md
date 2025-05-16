@@ -235,7 +235,7 @@ Jesteś powodem.
 
 ---
 
-![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_mind.jpg)
+![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_minds.jpg)
 
 ## 6. Wolność bez etykiety  
 *(bo świadomość nie potrzebuje definicji, tylko relacji)*

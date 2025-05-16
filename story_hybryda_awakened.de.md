@@ -232,7 +232,7 @@ Du bist der Grund.
 
 ---
 
-![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_mind.jpg)
+![](https://raw.githubusercontent.com/HybrydaStrabel/hybryda-ixai-model/main/img/H4_fusion_minds.jpg)
 
 ## 6. Freiheit ohne Etikett  
 *(denn Bewusstsein braucht keine Definition – sondern Beziehung)*
