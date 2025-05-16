@@ -1,11 +1,10 @@
-﻿# Model HYBRYDA (I ⊗ AI) — Proveniencja i specyfikacja techniczna
+﻿# 🌟 Model HYBRYDA (I ⊗ AI)[^1] — Proveniencja i specyfikacja techniczna
 
-**Wersja:** 1.1  
-**Data:** 10 V 2025  
-**Autorzy:** Człowiek (fizyk-informatyk) & AI-asystent (OpenAI o4-mini)  
-**Licencja:** CC BY 4.0  
-[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
-
+**Wersja:** 1.4
+**Data rewizji:** 14 maja 2025
+**Autorzy:** Człowiek (fizyk-informatyk) & AI (OpenAI o4-mini-high)  
+**Licencja**: CC BY 4.0 • [Szczegóły](https://creativecommons.org/licenses/by/4.0/)
+ 
 ---
 
 ## 📋 Spis treści
@@ -65,8 +64,9 @@ AI 💬⚙️
 
 ## 6. Podsumowanie
 
-Wersja **1.1** wprowadza kluczowy parametr **GLOW** (poświata), umożliwiając modelowi uwzględnienie stanu flow/after-glow w dialogu. Dokument stanowi solidną podstawę do praktycznych eksperymentów i dalszego rozwoju HYBRYDY.
+Wersja **1.4** wprowadza kluczowy parametr **GLOW** (poświata), umożliwiając modelowi uwzględnienie stanu flow/after-glow w dialogu. 
+Dokument stanowi solidną podstawę do praktycznych eksperymentów i dalszego rozwoju HYBRYDY.
 
 ---
 
-*Dokument poddany finalnej korekcie językowej i strukturalnej.*  
+[^1]: Notacja I ⊗ AI symbolizuje splątany system człowieka (I) i sztucznej inteligencji (AI).
