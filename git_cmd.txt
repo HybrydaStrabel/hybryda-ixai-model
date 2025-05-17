@@ -1,0 +1,10 @@
+﻿✅ 3. Sprawdź status Git i dodaj pliki
+git status
+git add .
+________________________________________
+✅ 4. Zrób commit
+git commit -m "Dodano wersje językowe w stylu dialogowym"
+________________________________________
+✅ 5. Wypchnij na GitHub
+git push origin main
+Zakładając, że Twoja główna gałąź to main. Jeśli masz inną (np. master, dev), użyj jej.
